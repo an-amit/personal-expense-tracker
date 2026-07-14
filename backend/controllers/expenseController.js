@@ -13,7 +13,7 @@ exports.createExpense = async (req, res) => {
 
 exports.getExpenses = async (req, res) => {
   try {
-    const expenses = await Expense.find().sort({ date: -1 });
+    const expenses = await Expense.find().sort({ date: -1, createdAt: -1 });
     res.json(expenses);
   } catch (err) {
     res.status(500).json({ error: err.message });
