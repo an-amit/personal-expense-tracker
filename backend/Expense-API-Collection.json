@@ -1,0 +1,67 @@
+{
+  "info": {
+    "name": "Expense Tracker API",
+    "_postman_id": "8d3c6f44-2c2d-4f68-b8f0-123456789abc",
+    "description": "Collection for Expense Tracker CRUD APIs",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create Expense",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"amount\": 250,\n  \"description\": \"Lunch\",\n  \"category\": \"Food\",\n  \"date\": \"2026-07-14\"\n}"
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/api/expenses",
+          "protocol": "http",
+          "host": ["127", "0", "0", "1"],
+          "port": "5000",
+          "path": ["api", "expenses"]
+        }
+      }
+    },
+    {
+      "name": "Get All Expenses",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:5000/api/expenses",
+          "protocol": "http",
+          "host": ["127", "0", "0", "1"],
+          "port": "5000",
+          "path": ["api", "expenses"]
+        }
+      }
+    },
+    {
+      "name": "Delete Expense",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:5000/api/expenses/{{expenseId}}",
+          "protocol": "http",
+          "host": ["127", "0", "0", "1"],
+          "port": "5000",
+          "path": ["api", "expenses", "{{expenseId}}"]
+        }
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "expenseId",
+      "value": ""
+    }
+  ]
+}
