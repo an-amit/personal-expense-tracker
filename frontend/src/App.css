@@ -51,6 +51,28 @@ h1 {
   font-weight: 700;
 }
 
+.error-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fde8e8;
+  color: #c0392b;
+  padding: 10px 16px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.error-bar button {
+  background: none;
+  border: none;
+  color: #c0392b;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 0 4px;
+}
+
 .app-body {
   flex: 1;
   display: flex;
